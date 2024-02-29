@@ -12,15 +12,19 @@ with open("config.json","r") as f:
 
 def click_some_img(path):
     if not path == "":
-        tb_1_btn = pyautogui.locateOnScreen(path,confidence=0.81)
-        if not tb_1_btn == None:
-            pyautogui.moveTo(tb_1_btn)
-            pyautogui.mouseDown()
-            time.sleep(0.1)
-            pyautogui.mouseUp()
-            print("done")
-        else:
-            print("Not found on screen please make sure UI is visible")
+        try:
+            tb_1_btn = pyautogui.locateOnScreen(path,confidence=0.81)
+            if not tb_1_btn == None:
+                pyautogui.moveTo(tb_1_btn)
+                pyautogui.mouseDown()
+                time.sleep(0.1)
+                pyautogui.mouseUp()
+                print("done")
+            else:
+                print("Not found on screen please make sure UI is visible")
+        except Exception as err_n:
+            print("Err - maybe Not found on screen try replacing the images with snipping tool")
+            print(err_n)
 
 def on_key_press(event):
     if config["debug"]:

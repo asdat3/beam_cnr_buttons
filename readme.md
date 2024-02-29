@@ -8,9 +8,12 @@ or modifying the code
 Usage
 =====
 
+Python3
 - clone
 - install all missing modules via pip or anything (I got no requirements since I didnt make a venv for this repo sorry)
-- if wished configure keys in source code (hardcoded sry)
+- configure `config.json`
 - should be self explaining xD else open a issue or smt. I doubt anyone is interested in this
 
+Release (.exe)
+- configure `config.json`
 - disable NumLock if you are using "my" hotkeys
