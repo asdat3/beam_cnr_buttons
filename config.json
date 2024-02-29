@@ -1,0 +1,29 @@
+{
+    "help":"change path to empty string like the following example path to ignore the keypress",
+    "example_path":"",
+    "num1":{
+        "label":"Rob",
+        "path":"images\\rob.PNG"
+    },
+    "num2":{
+        "label":"Respawn1",
+        "path":"images\\respawn1.PNG"
+    },
+    "num3":{
+        "label":"Repair",
+        "path":"images\\repair.PNG"
+    },
+    "num4":{
+        "label":"unassigned",
+        "path":""
+    },
+    "num5":{
+        "label":"unassigned",
+        "path":""
+    },
+    "num6":{
+        "label":"unassigned",
+        "path":""
+    },
+    "debug":false
+}
