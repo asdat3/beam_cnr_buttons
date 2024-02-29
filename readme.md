@@ -17,3 +17,9 @@ Python3
 Release (.exe)
 - configure `config.json`
 - disable NumLock if you are using "my" hotkeys
+
+Virustotal Link to .exe (requested)
+=====
+
+https://www.virustotal.com/gui/file/87bcf566348331229f83780a60109f230aa055eed79f4501e432e486a3f3ea05?nocache=1
+I am pretty sure some systems will flag it as a keylogger I am unsure what exactly is ment by this result aswell
