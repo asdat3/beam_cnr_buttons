@@ -30,7 +30,8 @@
         "use_external_joy":true,
         "detect_key_mode":false,
         "key_config":[
-            {"button":0,"path":"images\\rob.PNG","label":"Rob"}
+            {"button":0,"path":"images\\rob.PNG","label":"Rob"},
+            {"button":3,"path":"images\\respawn1.PNG","label":"Respawn1"}
         ]
     },
     "debug":false

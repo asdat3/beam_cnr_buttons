@@ -8,6 +8,9 @@ or modifying the code
 Usage
 =====
 
+https://youtu.be/ojk2LuSKr9g
+
+
 Python3
 - clone
 - install all missing modules via pip or anything (I got no requirements since I didnt make a venv for this repo sorry)
