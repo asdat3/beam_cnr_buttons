@@ -1,8 +1,12 @@
-import pyautogui, time, json, keyboard
+import pyautogui, time, json, keyboard, pygame
 from pynput.keyboard import Key, Controller
 from pynput import mouse
 
+pygame.init()
+pygame.joystick.init()
+
 mouse_controller = mouse.Controller()
+
 
 # RICHPRINT
 keyboard_pynput = Controller()
@@ -53,5 +57,38 @@ def on_key_press(event):
 
 keyboard.on_press(on_key_press)
 
-while True:
-    time.sleep(0.1)
+
+if config["external_joy"]["use_external_joy"]:
+    joystick_count = pygame.joystick.get_count()
+    if joystick_count == 0:
+        print("No joystick detected.")
+        exit()
+
+    joystick = pygame.joystick.Joystick(config["external_joy"]["joystick_nr"])
+    joystick.init()
+
+    print(f"Joystick Name: {joystick.get_name()}")
+    print(f"Number of Buttons: {joystick.get_numbuttons()}")
+
+    try:
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+
+            button_states = [joystick.get_button(i) for i in range(joystick.get_numbuttons())]
+            if config["external_joy"]["detect_key_mode"]:
+                print("Button States:", button_states)
+                time.sleep(0.1) # Optional: Add a delay to avoid excessive printing
+            else:
+                for button_hotkey_now in config["external_joy"]["key_config"]:
+                    if button_states[button_hotkey_now["button"]] == 1: #if button with that number is pressed
+                        print(str(button_hotkey_now["label"]) + " init [" + str(button_hotkey_now["button"]) + "]")
+                        click_some_img(button_hotkey_now["path"])
+    except KeyboardInterrupt:
+        pygame.quit()
+        print("\nExiting.")
+else:
+    while True:
+        time.sleep(0.1)

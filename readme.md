@@ -2,7 +2,7 @@ BeamMP CnR Button press with Button
 =====
 
 Uses image search to press a button with the mouse displayed by BeamMP when you hit a keyboard key
-can be used with a wheel//Controller//external Buttons by using JoyToKey
+can be used with a wheel//Controller//external Buttons!
 or modifying the code
 
 Usage

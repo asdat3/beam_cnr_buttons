@@ -25,5 +25,13 @@
         "label":"unassigned",
         "path":""
     },
+    "external_joy":{
+        "joystick_nr":0,
+        "use_external_joy":true,
+        "detect_key_mode":false,
+        "key_config":[
+            {"button":0,"path":"images\\rob.PNG","label":"Rob"}
+        ]
+    },
     "debug":false
 }
